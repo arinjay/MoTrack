@@ -15,6 +15,9 @@ class MovieTableViewController: UITableViewController {
         
         Movie.nowPlaying { (sucess:Bool,movieList:[Movie]?) in
             
+            for movie in movieList! {
+                    print(movie.title)
+            }
         }
         
         

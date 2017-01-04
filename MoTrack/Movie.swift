@@ -45,7 +45,25 @@ public struct Movie {
     
     public static func nowPlaying (with completion:@escaping (_ sucess:Bool,_ movies:[Movie]?)->()){
         Movie.getMovieData { (sucess, object) in
-            print(object)
+            //print(object)
+            if sucess {
+                var movieArray = [Movie]()
+                
+                if let movieResults = object?["results"] as? [Dictionary< String,AnyObject>]{
+                    for movie in movieResults{
+                        let title = movie["original_title"] as! String
+                        let description = movie["overview"] as! String
+                        guard let poster = movie["poster_path"] as? String
+                            else{continue}
+                        
+                        let movieObj = Movie(title: title, imagePath: poster , description: description)
+                        movieArray.append(movieObj)
+                    }
+                    completion(true, movieArray)
+                }
+                else{ completion(false, nil)}
+            }
+            
         }
     }
     
