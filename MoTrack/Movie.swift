@@ -6,7 +6,8 @@
 //  Copyright © 2016 Arinjay Sharma. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
 
 public struct Movie {
     
@@ -67,7 +68,41 @@ public struct Movie {
         }
     }
     
+}
+
+private func getDocumentsDirectory () -> String? {
+    let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+    guard let documents:String = paths.first else {return nil}
     
+    return documents
+}
+
+private func checkForImageData (withMovieObject movie:Movie) -> String? {
     
+    if let documents = getDocumentsDirectory(){
+        let moviePath = documents + "\(movie.title)"
+        
+         let escapedImagePath = movieImagePath.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        
+        if FileManager.default.fileExists(atPath: escapedImagePath!) {
+            return escapedImagePath
+        }
+    }
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
