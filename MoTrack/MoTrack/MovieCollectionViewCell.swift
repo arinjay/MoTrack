@@ -15,4 +15,6 @@ class MovieCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var MovieTitleLabel: UILabel!
     
+    
+    
 }

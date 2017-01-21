@@ -13,7 +13,7 @@ private let reuseIdentifier = "Cell"
 class MovieCollectionViewController: UICollectionViewController {
 
     var nowPlaying = [Movie]()
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,6 +85,7 @@ class MovieCollectionViewController: UICollectionViewController {
         let movie = nowPlaying[indexPath.row]
         cell.MovieTitleLabel.text = movie.title
         Movie.getImage(forCell: cell, withMovieObject: movie)
+        
         
     
         return cell

@@ -15,6 +15,7 @@
 		C734A7561E165299000C4A87 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C734A7551E165299000C4A87 /* Movie.swift */; };
 		C75DD40E1E31517000017AD8 /* MovieCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75DD40D1E31517000017AD8 /* MovieCollectionViewController.swift */; };
 		C75DD4101E31519200017AD8 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75DD40F1E31519200017AD8 /* MovieCollectionViewCell.swift */; };
+		C75DD4321E33F0FF00017AD8 /* MoviePresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75DD4311E33F0FF00017AD8 /* MoviePresentationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C734A7551E165299000C4A87 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		C75DD40D1E31517000017AD8 /* MovieCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewController.swift; sourceTree = "<group>"; };
 		C75DD40F1E31519200017AD8 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		C75DD4311E33F0FF00017AD8 /* MoviePresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviePresentationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				C75DD40D1E31517000017AD8 /* MovieCollectionViewController.swift */,
 				C75DD40F1E31519200017AD8 /* MovieCollectionViewCell.swift */,
 				C734A7551E165299000C4A87 /* Movie.swift */,
+				C75DD4311E33F0FF00017AD8 /* MoviePresentationController.swift */,
 				C734A7451E164BA6000C4A87 /* Main.storyboard */,
 				C734A7481E164BA6000C4A87 /* Assets.xcassets */,
 				C734A74A1E164BA6000C4A87 /* LaunchScreen.storyboard */,
@@ -149,6 +152,7 @@
 				C75DD40E1E31517000017AD8 /* MovieCollectionViewController.swift in Sources */,
 				C75DD4101E31519200017AD8 /* MovieCollectionViewCell.swift in Sources */,
 				C734A7421E164BA6000C4A87 /* AppDelegate.swift in Sources */,
+				C75DD4321E33F0FF00017AD8 /* MoviePresentationController.swift in Sources */,
 				C734A7561E165299000C4A87 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
