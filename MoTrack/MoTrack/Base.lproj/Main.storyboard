@@ -58,7 +58,7 @@
         <scene sceneID="ij1-ts-1Ux">
             <objects>
                 <collectionViewController id="nwT-Za-FBj" customClass="MovieCollectionViewController" customModule="MoTrack" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="okI-ae-bvv">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="okI-ae-bvv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -107,10 +107,10 @@
             </objects>
             <point key="canvasLocation" x="461.60000000000002" y="738.98050974512751"/>
         </scene>
-        <!--View Controller-->
+        <!--Overlay View Controller-->
         <scene sceneID="XhU-F0-Nh8">
             <objects>
-                <viewController providesPresentationContextTransitionStyle="YES" id="PgE-Nr-U5Z" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Overlay" providesPresentationContextTransitionStyle="YES" id="PgE-Nr-U5Z" customClass="OverlayViewController" customModule="MoTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RXE-3R-SAH"/>
                         <viewControllerLayoutGuide type="bottom" id="9c2-Dq-UXg"/>
@@ -119,7 +119,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bdjsbvhb njdv vjsbv vsjfvbf jfff fbvjbv jj egerbd    fb   e bwee" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4R-oI-qvn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bdjsbvhb njdv vjsbv vsjfvbf jfff fbvjbv jj egerbd    fb   e bwee" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4R-oI-qvn">
                                 <rect key="frame" x="25" y="65" width="334" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="334" id="1eu-jN-dl4"/>
@@ -149,6 +149,9 @@
                                 <state key="normal" title="Return">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="closeVC:" destination="PgE-Nr-U5Z" eventType="touchUpInside" id="adx-L4-SYK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -167,6 +170,10 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="250"/>
+                    <connections>
+                        <outlet property="TitleLabel" destination="a5c-6p-R65" id="GOR-vh-s5b"/>
+                        <outlet property="descriptionText" destination="j4R-oI-qvn" id="TI1-s2-agj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e0v-2a-ckV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -22,10 +22,12 @@ class MoviePresentationController: UIPresentationController, UIAdaptivePresentat
         dimmingView.backgroundColor = UIColor(white: 0, alpha: 0.8)   //white 0-- black  0.8 for shine
         dimmingView.alpha = 0   // invisible initially
         
+        
     }
     override func presentationTransitionWillBegin() {
         dimmingView.frame = self.containerView!.bounds
         dimmingView.alpha = 0
+        containerView?.insertSubview(dimmingView, at: 0)  // makes the base vc dimmer
         
         if let coordinator = presentedViewController.transitionCoordinator//return active transition cordinator onject 
         {
